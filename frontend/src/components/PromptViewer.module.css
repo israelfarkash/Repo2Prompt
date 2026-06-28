@@ -1,0 +1,99 @@
+.viewerContainer {
+  background: var(--surface-base);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-top: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: var(--surface-elevated);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.title {
+  font-weight: 600;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--border-bright);
+}
+
+.btn.primary {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn.primary:hover {
+  background: var(--primary-light);
+}
+
+.contentWrapper {
+  display: flex;
+}
+
+.markdownBody {
+  padding: 2rem;
+  flex: 1;
+  max-height: 70vh;
+  overflow-y: auto;
+  font-size: 1rem;
+  line-height: 1.6;
+  direction: ltr; /* Ensure English prompt is left-to-right */
+  text-align: left;
+}
+
+/* Markdown styling */
+.markdownBody h1, .markdownBody h2, .markdownBody h3 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 0.5rem;
+}
+
+.markdownBody p {
+  margin-bottom: 1rem;
+  color: var(--text-secondary);
+}
+
+.markdownBody ul, .markdownBody ol {
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+  color: var(--text-secondary);
+}
+
+.markdownBody pre {
+  margin: 1.5rem 0;
+  border-radius: 8px;
+  border: 1px solid var(--border-subtle);
+}
